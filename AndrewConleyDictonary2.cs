@@ -30,7 +30,9 @@ public class MyDictionary
         {
             sumAscii += (int)c;
         }
-
+  // JDK -- NOTE - this is not exactly the hash function we discussed in class.  The Modulus % operator is a much better way to arrive at bin numbers since you can predict the exact number of bins
+        // you will generate.   This should be return sumAscii % maxBins;   No need to take the average first.
+        
         //avg ascii
         int averageAscii = sumAscii / str.Length;
 
